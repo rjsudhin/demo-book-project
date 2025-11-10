@@ -20,5 +20,104 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  background-image: url('/images/branden-skeli-NIO1ZDB5kL0-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#container {
+  border: none;
+  width: 100%;
+  max-width: 550px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  background-color: #ffffff23;
+  border-radius: .8rem;
+  box-shadow: 2px 2px 3px #2525257c;
+  form .row {
+    label {
+      font-size: 1rem;
+      color: #ffff;
+      text-shadow: 1px 1px 1px #252525;
+    }
+    input {
+      border: none;
+      box-shadow: 2px 2px 3px #2525257c;
+      font-size: 1rem;
+      border-radius: .4rem;
+      height: 35px;
+      padding: .7rem;
+      outline: none;
+    }
+    button {
+      height: 35px;
+      font-weight: bold;
+      color: #fff;
+      background-color: rgb(96, 218, 139);
+      text-transform: uppercase;
+      border: none;
+      border-radius: .4rem;
+      box-shadow: 2px 2px 3px #2525257c;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 650px) {
+  
+  #container form .row {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    label {
+      width: 180px;
+      text-align: right;
+    }
+    input {
+      width: 250px;
+    }
+
+  }
+
+  #container form .row:nth-child(4) {
+    width: 180px;
+    
+    button {
+      margin-left: auto;
+      width: 100%;
+      max-width: 150px;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  body {
+    background-color: lightcoral;
+  }
+
+  #container form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #container form .row {
+    padding: 1rem 1.2rem;
+    margin: .5rem 0;
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+    label {
+      margin-bottom: .4rem;
+    }
+  }
+
+  #container form .row:nth-child(4) {
+    display: flex;
+    padding-top: 2.5rem;
+    justify-content: center;
+  }
 }
 
