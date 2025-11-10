@@ -94,9 +94,6 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
-  body {
-    background-color: lightcoral;
-  }
 
   #container form {
     display: flex;
