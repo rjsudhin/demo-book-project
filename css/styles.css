@@ -28,14 +28,29 @@ body {
 }
 
 #container {
-  border: none;
-  width: 100%;
-  max-width: 550px;
-  padding: 1rem;
-  backdrop-filter: blur(10px);
-  background-color: #ffffff23;
-  border-radius: .8rem;
-  box-shadow: 2px 2px 3px #2525257c;
+  
+  /* header container */
+  #header-container {
+    margin-bottom: 1rem;
+    #app-heading {
+      color: #f1eceb;
+      text-align: center;
+      text-shadow: 2px 2px 2px #252525;
+    }
+  }  
+  /* header container */
+
+  /* form */
+  form {
+    border: none;
+    width: 100%;
+    max-width: 550px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff23;
+    border-radius: .8rem;
+    box-shadow: 2px 2px 3px #2525257c;
+  }
   form .row {
     label {
       font-size: 1rem;
@@ -62,6 +77,8 @@ body {
       box-shadow: 2px 2px 3px #2525257c;
     }
   }
+  /* form */
+
 }
 
 
