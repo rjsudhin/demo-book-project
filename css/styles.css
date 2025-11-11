@@ -21,7 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background-image: url('/images/branden-skeli-NIO1ZDB5kL0-unsplash.jpg');
+  background-image: url('../images/background-image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
