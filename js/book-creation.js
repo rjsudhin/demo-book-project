@@ -17,6 +17,7 @@ function Book(title, author, page) {
 
 Book.prototype.info = function() {
   console.log(`${this.title} writed ${this.author} with ${this.page} pages`)
+
 }
 
 // save button clicks
@@ -32,6 +33,14 @@ saveBtn.addEventListener('click', (e) => {
 function creatingNewBook() {
   let obj = new Book(bookInputTitle.value, bookInputAuthor.value, bookInputPages.value)
   console.log(obj)
+  const book = document.createElement('div')
+  book.classList.add('book')
+  book.innerHTML = `
+    <h3>${obj.title}</h3>
+    <p>${obj.author}</p>
+    <p>${obj.page}</p>
+  `
+  document.body.appendChild(book)
 }
 
 
