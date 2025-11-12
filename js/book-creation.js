@@ -36,13 +36,21 @@ function creatingNewBook() {
   let obj = new Book(bookInputTitle.value, bookInputAuthor.value, bookInputPages.value)
   console.log(obj)
   const book = document.createElement('div')
+  let randomBookCode = gettingRandomNumber()
   book.classList.add('book')
   book.innerHTML = `
     <h3>${obj.title}</h3>
     <p>${obj.author}</p>
     <p> Total Pages : ${obj.page}</p>
+    <p>Book Shelf code : ${randomBookCode}</p>
   `
+
+  const objString = JSON.stringify(obj)
+  localStorage.setItem(randomBookCode, objString)
   bookContainer.appendChild(book)
+  bookInputTitle.value = ''
+  bookInputAuthor.value = ''
+  bookInputPages.value = ''
 }
 
 
@@ -60,6 +68,11 @@ function checkingInputFields() {
   } else {
     return false
   }
+}
+
+// getting a random number
+function gettingRandomNumber() {
+  return Math.random()
 }
 
 
