@@ -4,6 +4,8 @@ const bookInputAuthor = document.querySelector('#user-book-author')
 const bookInputPages = document.querySelector('#user-book-page')
 const saveBtn = document.querySelector('.save-button')
 
+const bookContainer = document.querySelector('#book-container')
+
 // Book Constructor
 function Book(title, author, page) {
   if (!new.target) {
@@ -38,9 +40,9 @@ function creatingNewBook() {
   book.innerHTML = `
     <h3>${obj.title}</h3>
     <p>${obj.author}</p>
-    <p>${obj.page}</p>
+    <p> Total Pages : ${obj.page}</p>
   `
-  document.body.appendChild(book)
+  bookContainer.appendChild(book)
 }
 
 
