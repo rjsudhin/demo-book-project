@@ -17,9 +17,8 @@ function Book(title, author, page) {
   }
 }
 
-Book.prototype.info = function() {
-  console.log(`${this.title} writed ${this.author} with ${this.page} pages`)
-
+Book.prototype.deleteCurrentBook = function(e) {
+  console.log(e.target)
 }
 
 // save button clicks
@@ -40,11 +39,12 @@ function creatingNewBook() {
   book.classList.add('book')
   book.innerHTML = `
     <h3>${obj.title}</h3>
-    <p>${obj.author}</p>
+    <button onclick='deleteCurrentBook()'>delete</button>
+    <p>Authore : ${obj.author}</p>
     <p> Total Pages : ${obj.page}</p>
     <p>Book Shelf code : ${randomBookCode}</p>
   `
-
+  
   const objString = JSON.stringify(obj)
   localStorage.setItem(randomBookCode, objString)
   bookContainer.appendChild(book)
